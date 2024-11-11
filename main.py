@@ -17,7 +17,7 @@ template = ChatPromptTemplate.from_message (
     ]
 )
 prompt = template.format_messages(input_variables = ["topic"] )
-)
+
 
 st.title("Scientific Blog App with LangChain")
 user_topic = st.text_input("WHich topic do you want to write about?")
