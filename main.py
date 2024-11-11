@@ -5,7 +5,7 @@ from langchain import PromptTemplate, LLMChain
 openai_api_key = st.secrets["openai"]["OPENAI_API_KEY"]
 
 llm = OpenAI(api_key=openai_api_key)
-template = "You are an experienced scientist and you write scientific blog {topic} only"
+template = "You are an experienced scientist and you write scientific blog {topic} only. Do not write anything that is not scientifically related"
 prompt = PromptTemplate(template=template, input_variables = ["topic"] )
 llm_chain=LLMChain(prompt=prompt, llm=llm)
 
